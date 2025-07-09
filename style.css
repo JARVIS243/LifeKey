@@ -1,0 +1,254 @@
+/* Reset & base */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0fafb; /* very light teal/blue */
+  color: #1a1a1a;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  max-width: 640px;
+  width: 100%;
+  margin: 30px auto 40px;
+  padding: 25px 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 105, 105, 0.1);
+  flex-grow: 1;
+}
+
+/* Heading */
+h1 {
+  color: #007c91;
+  font-weight: 700;
+  font-size: 2.0rem;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 24px;
+  letter-spacing: 0.04em;
+  font-family: 'Segoe UI Semibold', 'Segoe UI', sans-serif;
+}
+
+/* Form elements */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+input,
+textarea {
+  font-size: 1.1rem;
+  padding: 14px 16px;
+  border: 2px solid #a9d6d5;
+  border-radius: 12px;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+  color: #004d4d;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #007c91;
+  outline: none;
+  box-shadow: 0 0 8px #007c91aa;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+  font-size: 1.05rem;
+}
+
+/* Buttons row */
+.btn-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.btn-row button {
+  background: #009688;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 150, 136, 0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  min-width: 120px;
+  font-family: inherit;
+}
+
+.btn-row button:hover {
+  background: #007c70;
+  box-shadow: 0 8px 20px rgba(0, 124, 112, 0.5);
+}
+
+/* Card wrapper */
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* Flip Card */
+.flip-card {
+  width: 3.37in;
+  height: 2.125in;
+  perspective: 1200px;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0, 105, 105, 0.15);
+  background: #ffffff;
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  transition: transform 0.7s ease-in-out;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  backface-visibility: hidden;
+  padding: 20px 18px;
+  box-sizing: border-box;
+  display: flex;
+  color: #004d4d;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #a9d6d5 0%, #004d4d 100%);
+  box-shadow: inset 0 0 20px #00646488;
+}
+
+.flip-card-front {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: #e0f2f1;
+}
+
+.flip-card-back {
+  flex-direction: column;
+  justify-content: space-between;
+  transform: rotateY(180deg);
+  color: #cce7e4;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Front left info */
+.card-front-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* User photo */
+.card-front-photo {
+  margin-left: 16px;
+  border-radius: 18px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 105, 105, 0.35);
+}
+
+.card-front-photo img.card-photo-large {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 3px solid #cce7e4;
+  box-shadow: 0 0 8px #009688aa;
+}
+
+/* Back card info */
+.card-back-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  line-height: 1.3;
+}
+
+/* Flip button */
+.flip-btn {
+  margin: 24px auto 0;
+  background: #007c70;
+  color: white;
+  padding: 12px 26px;
+  border-radius: 14px;
+  border: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(0, 124, 112, 0.4);
+  transition: background-color 0.3s ease;
+  display: block;
+}
+
+.flip-btn:hover {
+  background: #005046;
+}
+
+/* Slip container */
+#slipContainer {
+  margin-top: 30px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 25px 30px;
+  box-shadow: 0 12px 30px rgba(0, 105, 105, 0.1);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #003333;
+}
+
+.slip h3 {
+  margin-top: 0;
+  font-weight: 700;
+  color: #00675b;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.slip p {
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 20px 0;
+  color: #555;
+  background: #e0f2f1;
+  border-top: 1px solid #b2dfdb;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  font-family: 'Segoe UI Semibold', 'Segoe UI', sans-serif;
+  user-select: none;
+}

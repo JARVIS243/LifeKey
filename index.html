@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LifeKey – Emergency Info Card</title>
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+ 
+  <div class="container">
+    <h1>🏥 LifeKey – Emergency Info Card</h1>
+    <form id="info-form">
+      <input type="text" id="fullName" placeholder="FullName (e.g., John Doe)" required />
+      <input type="date" id="dob" required />
+      <input type="text" id="bloodGroup" placeholder="BloodGroup (e.g., O+)" required />
+      <input type="tel" id="emergencyContact" placeholder="EmergencyContact (e.g., 9876543210)" required />
+      <textarea id="address" placeholder="Address (e.g., 123 Health Street, City)" required></textarea>
+      <input type="text" id="allergies" placeholder="Allergies (e.g., Peanuts, Penicillin)" />
+      <input type="text" id="medicalConditions" placeholder="MedicalConditions (e.g., Asthma, Diabetes)" />
+      <input type="text" id="medications" placeholder="Medications (e.g., Insulin, Ventolin)" />
+      <input type="text" id="doctorContact" placeholder="DoctorContact (e.g., Dr. Smith – 9876543211)" />
+      <input type="file" id="userPhoto" accept="image/*" />
+      <div class="btn-row">
+        <button type="submit">Submit</button>
+        <button type="button" id="pvc-card-btn">PVC CARD</button>
+        <button type="button" id="generate-slip">Generate Card</button>
+      </div>
+    </form>
+
+    <div class="card-wrapper">
+      <div id="flipCard" class="flip-card" style="display: none;">
+        <div class="flip-card-inner">
+          <div id="card-front" class="flip-card-front"></div>
+          <div id="card-back" class="flip-card-back"></div>
+        </div>
+        <button id="flip-btn" class="flip-btn">Flip</button>
+      </div>
+    </div>
+
+    <div id="slipContainer" style="display: none;"></div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <!-- ✅ Footer -->
+  <footer class="footer">
+    &copy; 2025 LifeKey. Published By <strong>Aju Krishna</strong>. All rights reserved.
+  </footer>
+
+
+</body>
+</html>
